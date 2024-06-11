@@ -1,8 +1,8 @@
 # Pymongo
 
-[Pymongo_find()](Pymongo%205f20539e770a488f8c7802a149956d26/Pymongo_find()%201fbb8e2cb41c45f2a29cbc5331dea128.md)
+[Pymongo_find()](<Pymongo/Pymongo_find().md>)
 
-[Pymongo_aggregate()](Pymongo%205f20539e770a488f8c7802a149956d26/Pymongo_aggregate()%205893f45e1d774191b4ae04a893d25cb4.md)
+[Pymongo_aggregate()](<Pymongo/Pymongo_aggregate().md>)
 
 ### **1. pymongo 설치**
 
@@ -72,13 +72,13 @@ users= db.users
 
 ```python
 # 단일 문서 삽입
-db = client['test'] 
-collection = db.users 
+db = client['test']
+collection = db.users
 # or
 # collection = db["users"]
 data = {"name": "John", "age": 30}
 result = collection.insert_one(data)
-print("Inserted ID:", result.inserted_id) # _id 
+print("Inserted ID:", result.inserted_id) # _id
 
 # 여러 문서 삽입
 data = [
@@ -95,7 +95,6 @@ print("Inserted IDs:", result.inserted_ids) # _id 리스트
 - 데이터를 조회하려면 find_one() 또는 find() 메서드를 사용합니다.
 
 > MongoDB 에서는 findOne() 또는 insertMany 과 같이 naming 이 되어 있지만, pymongo 에서는 find_one() 또는 insert_many() 와 같은 naming 으로 되어 있음
-> 
 
 ```python
 db = client['데이터베이스_이름']

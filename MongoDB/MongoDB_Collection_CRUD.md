@@ -1,6 +1,6 @@
 # MongoDB_Collection_CRUD
 
-[유용한 추가 문법](MongoDB_Collection_CRUD%206becd188db03455bb51ad6514307bb1a/%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%2086a44cd625804c86a5888b896320e811.md)
+[Useful_Additional_Syntax](MongoDB_Collection_CRUD/Useful_Additional_Syntax.md)
 
 ## 1. Document 입력(CREATE) - insertOne, insertMany
 
@@ -27,7 +27,7 @@ db.users.insertMany([
 ])
 
 # SQL
-INSERT INTO your_table_name (name, age) 
+INSERT INTO your_table_name (name, age)
 VALUES ('Alice', 25),
        ('Bob', 30),
        ('Charlie', 35);
@@ -44,7 +44,7 @@ VALUES ('Alice', 25),
 
 db.users.find(                # collection
 		{ age: { $gt: 18} },      # query criteria
-		{ name: 1, address: 1}    # projection                   
+		{ name: 1, address: 1}    # projection
 ).limit(5)                    # cursor modifier
 ```
 
@@ -66,13 +66,13 @@ SELECT * FROM users WHERE address = "서울"
 ### 2.1 비교 문법
 
 ```json
-$eq     =    
-$gt     >    
-$gte    >=   
+$eq     =
+$gt     >
+$gte    >=
 $in          Matches any of the values specified in an array.
-$lt     <    
-$lte    <=  
-$ne     !=   
+$lt     <
+$lte    <=
+$ne     !=
 $nin         Matches none of the values specified in an array.
 ```
 
@@ -113,10 +113,9 @@ SELECT * FROM users WHERE age != 45
 - `updateOne` - 매칭되는 한개의 document 업데이트
 - `updateMany` - 매칭되는 여러개의 document 업데이트
 
-[Document 수정 관련 문법](MongoDB_Collection_CRUD%206becd188db03455bb51ad6514307bb1a/Document%20%E1%84%89%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%A7%E1%86%AB%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%20fcf88aa8c69845e0b3ec6aea05ec1a87.md)
+[Document_Update_Syntax](MongoDB_Collection_CRUD/Document_Update_Syntax.md)
 
 > 업데이트해야 하는 데이터(Key:Value)가 없으면, 해당 데이터가 해당 Document에 추가됨
-> 
 
 ```sql
 db.users.updateMany(                   # collection
