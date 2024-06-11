@@ -4,7 +4,7 @@
 
 - 이름이 ‘유진’인 문서에서 ‘age’필드를 26으로 업데이트하는 명령:
     - MongoDB: `db.usres.updateOne( { name: “유진” }, { $set: { age: 26 } })`
-    - SQL에서는 UPDATE users SET age = 26 WHERE name = ‘유진’과 동일
+    - SQL에서는 `UPDATE users SET age = 26 WHERE name = ‘유진’`과 동일
 
 ## 문서를 replace 하기
 
@@ -14,15 +14,9 @@
 
 ## 특정 필드를 제거하기
 
-- 이름인 “유진”인 문서에서 “age”필드를 제거하는 명령:
+- 이름인 ‘유진’인 문서에서 ‘age’필드를 제거하는 명령:
     - MongoDB: `db.users.updateOne( { name: “유진” }, { $unset: { age: 1} } )`
-    - SQL에서는 `UPDATE usres SET age = NULL WHERE name = ‘유진’`과 유사
-
-## 특정 필드를 제거하기
-
-- 이름이 ‘유진’인 문서에서 ‘age’ 필드를 제거하는 명령:
-    - MongoDB: `db.users.updateOne( { name: “유진” }, { $unset: { age: 1 } } )`
-    - SQL에서는 UPDATE users SET age = NULL WHERE name = ‘유진’과 유사
+    - SQL에서는 `UPDATE users SET age = NULL WHERE name = ‘유진’`과 유사
 
 ## 특정 조건을 만족하는 문서가 없을 경우 새로 추가하기
 

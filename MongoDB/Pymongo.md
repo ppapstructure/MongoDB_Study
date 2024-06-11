@@ -1,5 +1,9 @@
 # Pymongo
 
+[Pymongo_find()](Pymongo%205f20539e770a488f8c7802a149956d26/Pymongo_find()%201fbb8e2cb41c45f2a29cbc5331dea128.md)
+
+[Pymongo_aggregate()](Pymongo%205f20539e770a488f8c7802a149956d26/Pymongo_aggregate()%205893f45e1d774191b4ae04a893d25cb4.md)
+
 ### **1. pymongo 설치**
 
 - pymongo 설치하는 코드
@@ -34,7 +38,7 @@ client = MongoClient("mongodb://localhost:27017")
 # 데이터베이스 선택# 해당 데이터베이스가 없으면 해당 데이터베이스에 새로운 컬렉션에 데이터 처리시, 해당 데이터베이스와 컬렉션이 자동 생성
 db= client["mydatabase"]
 # 또는db= client.mydatabase
-# 이때 mydatabase는 db의 이름을 의미
+# 이때 mydatabase는 임의의 db 이름을 의미
 ```
 
 **데이터베이스의 컬렉션 리스트 확인**
@@ -57,6 +61,7 @@ for collection in collections:
 users= db["users"]
 # 또는
 users= db.users
+# users는 임의의 collection 이름
 ```
 
 # Pymongo CRUD
@@ -93,6 +98,8 @@ print("Inserted IDs:", result.inserted_ids) # _id 리스트
 > 
 
 ```python
+db = client['데이터베이스_이름']
+collection = db.컬렉션_이름
 # 단일 문서 조회
 db = client['test']
 collection = db.users

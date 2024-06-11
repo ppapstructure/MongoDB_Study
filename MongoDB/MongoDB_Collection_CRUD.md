@@ -8,7 +8,6 @@
 - `insertMany` : 여러개의 document 생성
 
 ```sql
-
 # insertOne EX)
 db.people.insertOne(
 	{ user_id: "bcd001", age:45, status:"A" }
@@ -106,6 +105,7 @@ SELECT * FROM users WHERE address = "경기도" OR age = 45
 
 db.users.find({ age: { $not: { $eq: 45 } } })
 SELECT * FROM users WHERE age != 45
+
 ```
 
 ## 3. Document 수정(Update) 문법 - updateOne, updateMany
